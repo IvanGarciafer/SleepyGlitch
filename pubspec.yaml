@@ -1,0 +1,35 @@
+name: sleepy_glitch_web
+description: "Web oficial del estudio indie Sleepy Glitch (proyecto de clase)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  url_launcher: ^6.3.0
+  font_awesome_flutter: ^11.0.0
+  web: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/gallery/
+
+  fonts:
+    # DejaVu Sans Mono: la misma tipografía que usa el logo.
+    - family: SleepyMono
+      fonts:
+        - asset: assets/fonts/DejaVuSansMono.ttf
+        - asset: assets/fonts/DejaVuSansMono-Bold.ttf
+          weight: 700
