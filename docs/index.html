@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sleepy Glitch — estudio indie de videojuegos de Jaén. Tráiler, galería, GDD, equipo y eventos de nuestro juego.">
+  <meta name="theme-color" content="#1A1028">
+
+  <!-- Open Graph (vista previa al compartir en redes) -->
+  <meta property="og:title" content="Sleepy Glitch · Estudio indie">
+  <meta property="og:description" content="Hacemos juegos con sueño. Descubre nuestro primer juego.">
+  <meta property="og:image" content="icons/Icon-512.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Sleepy Glitch">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon personalizado (cabeza del fantasma) -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  <title>Sleepy Glitch · Estudio indie</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #1A1028; }
+    #splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 18px;
+      font-family: monospace; color: #CC99C9; letter-spacing: 2px;
+    }
+    #splash img { width: 150px; animation: float 2.4s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(-14px); } }
+  </style>
+</head>
+<body>
+  <div id="splash">
+    <img src="splash.png" alt="Sleepy Glitch">
+    <span>despertando al fantasma...</span>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var s = document.getElementById('splash');
+      if (s) s.remove();
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
